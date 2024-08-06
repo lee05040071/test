@@ -44,12 +44,6 @@
             width: 100%;
             bottom: 0;
         }
-        .page {
-            display: none; /* This is just for demonstration purposes */
-        }
-        .page[data-action='Product-Show'] {
-            display: block; /* This would be displayed on the product show page */
-        }
     </style>
 </head>
 <body>
@@ -64,28 +58,9 @@
     <div class="content">
         <h2>About Us</h2>
         <p>We offer the best outdoor products for your adventures.</p>
-        <!-- Example div for Product-Show page -->
-        <div class="page" data-action="Product-Show"></div>
     </div>
     <footer>
         &copy; 2024 My Outdoor Shop
     </footer>
-
-    <script>
-        // JavaScript for isMatch function
-        const productPageChecker = {
-            name: "product",
-            isMatch: () => {
-                return document.querySelectorAll("div.page[data-action='Product-Show']").length > 0;
-            }
-        };
-
-        // Example usage of isMatch function
-        if (productPageChecker.isMatch()) {
-            console.log('This is the product show page');
-        } else {
-            console.log('This is not the product show page');
-        }
-    </script>
 </body>
 </html>
